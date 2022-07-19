@@ -1,0 +1,102 @@
+/*Typography*/
+.checkbox input:checked~.check-box {
+    color: #D93637;
+}
+
+.checkbox label:hover .check-box {
+    color: #D93637;
+}
+
+.checkbox .check-box::after,
+.checkbox .check-box::before {
+    background-color: #D93637;
+}
+
+.radio input:checked~.check-box::before {
+    color: #D93637;
+}
+
+.radio .check-box::after {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    background-color: #D93637;
+    border-color: #D93637;
+}
+
+.form-group .mtrl-select::before {
+    background: #d93637;
+}
+
+button {
+    border-radius: 4px;
+}
+
+.bg-light-gray {
+    background: #f4f7f6 none repeat scroll 0 0;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+
+#topcontrol {
+    background: #D93637 !important;
+}
+
+/*Login Page*/
+.mtr-btn::before {
+    background: #D93637;
+    border: 50vh solid #D93637;
+}
+
+.mtr-btn,
+.mtr-btn:hover {
+    color: #D93637;
+}
+
+/*--- topbar ---*/
+.nav-top-left-col{
+    text-align: center;
+}
+
+.nav-top-left-col .top-area {
+    /*width: inherit;*/
+    padding: 10px 0 0 0;
+}
+
+.nav-top-left-col .top-area>ul.main-menu>li{
+    line-height: 26px;
+}
+
+.nav-top-left-col .top-area>ul.main-menu>li a i{
+    color: #fff;
+}
+
+.nav-top-left-col .top-area>ul.main-menu>li ul{
+    margin-top: 20px;
+}
+
+.nav-top-left-col .top-area>ul>li>a>span {
+    bottom: -14px;
+    right: -10px;
+}
+
+.nav-top-left-col .top-area>ul>li>a>span.profile-span {
+    right: -12px;
+}
+
+
+.nav-top-left-col .top-area>ul>li.hover-btn>a>span{
+    right: -15px;
+}
+
+.dropdowns.hover-content{
+    width: 100px;
+}
+
+li.hover-btn a:hover hover-content.active{
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}

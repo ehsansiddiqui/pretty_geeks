@@ -1,0 +1,546 @@
+
+p {
+	margin: 0;
+}
+
+svg {
+	max-height: 300px;
+}
+
+.col-lg-6 p:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+/* style of main box */
+.box-wrapper {
+	/*width: 70%;*/
+	/*background-color: #fff;*/
+	/*border: 1px solid #c9c9c9;*/
+	/*border-radius: 5px;*/
+	/*margin: auto;*/
+	/*overflow: hidden;*/
+}
+
+/* Style the form */
+#regForm {
+	background-color: #ffffff;
+	/* margin: 100px auto; */
+	/* width: 70%; */
+	padding: 40px;
+	min-width: 300px;
+}
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 900px;
+    }
+}
+/* Style the input fields */
+input {
+	width: 100%;
+	font-size: 14px;
+	background-color: #f2f2f2;
+	border: 2px solid #f2f2f2;
+	color: #898989;
+	padding: 15px 25px;
+	outline: 0;
+}
+
+.interested-input {
+	width: 100%;
+	font-size: 14px;
+	background-color: #f2f2f2;
+	border: 2px solid #f2f2f2;
+	color: #898989;
+	padding: 15px 25px;
+	outline: 0;
+	margin-bottom: 20px;
+}
+
+.interested-input:focus {
+	border: 2px solid #f2f2f2;
+	border-left: 2px solid #d64545;
+	background-color: #fff;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+	background-color: #ffdddd;
+}
+
+input.focus {
+	border: 2px solid #f2f2f2;
+	border-left: 2px solid #d64545;
+	background-color: #fff;
+}
+
+/* Hide all steps by default: */
+.tab {
+	display: none;
+}
+
+/* Vector graphics side tab */
+.tab-vector {
+	width: 100%;
+	max-height: 300px;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbbbbb;
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+	opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+	background-color: #d64545;
+}
+
+/* Btn box for navigation buttons*/
+.btn-box {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Btn box for next button*/
+.btn-box-right {
+	display: flex;
+	justify-content: flex-end;
+	flex: 1;
+}
+
+/* utilities */
+.border-right-utils {
+	/* border-right: 1px solid #c9c9c9; */
+	border-right: 1px solid #f2f2f2;
+}
+
+/* navigation buttons */
+#nextBtn,
+#prevBtn,
+#skipBtn {
+	color: #898989;
+	border: 0;
+	background: transparent;
+	outline: none;
+}
+
+#nextBtn:hover .fas {
+	color: #d64545;
+	transform: translateX(3px);
+}
+
+#prevBtn:hover .fas {
+	color: #d64545;
+	transform: translateX(-3px);
+}
+
+#nextBtn .fas,
+#prevBtn .fas {
+	color: #898989;
+	transition: all 0.3s;
+}
+
+/* invite friends */
+.invite-social ul {
+	list-style: none;
+	display: flex;
+}
+
+.invite-social .fab {
+	font-size: 30px;
+	margin-right: 10px;
+}
+
+.fab.fa-facebook-square {
+	color: #5d85dd;
+	transition: color 0.3s;
+}
+
+.fab.fa-facebook-square:hover {
+	color: #5173be;
+}
+
+.fab.fa-twitter-square {
+	color: #66ccf4;
+	transition: color 0.3s;
+}
+
+.fab.fa-twitter-square:hover {
+	color: #54aed1;
+}
+
+.fab.fa-instagram-square {
+	color: #cd6dab;
+	transition: color 0.3s;
+}
+
+.fab.fa-instagram-square:hover {
+	color: #b36096;
+}
+.invite-social
+
+/* check buttons */
+.input-check {
+	display: flex;
+}
+
+.single-check {
+	display: flex;
+	align-items: center;
+}
+
+.single-check .gender-radio {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 3px;
+	border: 1px solid #d64545;
+	position: relative;
+	margin-right: 5px;
+}
+
+.gender-radio:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #d64545;
+	background-color: #d64545;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+}
+
+input:checked ~ label .gender-radio:after {
+	visibility: visible;
+	opacity: 1;
+}
+
+.single-check:first-child {
+	margin-right: 20px;
+}
+
+.single-check input {
+	margin-right: 5px;
+	display: none;
+}
+
+/* upload profile image */
+/*Profile Pic Start*/
+.picture-container {
+	position: relative;
+	cursor: pointer;
+	text-align: center;
+
+	width: 106px;
+	height: 106px;
+	margin: -53px auto 0 auto;
+}
+.picture {
+	width: 106px;
+	height: 106px;
+	background-color: #f2f2f2;
+	border: 4px solid #cccccc;
+	color: #ffffff;
+	border-radius: 50%;
+	margin: 0px auto;
+	overflow: hidden;
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+}
+.picture:hover {
+	/* border-color: #2ca8ff; */
+	/* border-color: #d64545; */
+	border-color: #ffce55;
+}
+.content.ct-wizard-green .picture:hover {
+	border-color: #05ae0e;
+}
+.content.ct-wizard-blue .picture:hover {
+	border-color: #3472f7;
+}
+.content.ct-wizard-orange .picture:hover {
+	border-color: #ff9500;
+}
+.content.ct-wizard-red .picture:hover {
+	border-color: #ff3b30;
+}
+.picture input[type="file"],
+.cover-container input[type="file"] {
+	cursor: pointer;
+	display: block;
+	height: 100%;
+	left: 0;
+	opacity: 0 !important;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.picture-src {
+	width: 100%;
+}
+
+/* cover photo */
+.cover-container {
+	width: 100%;
+	height: 350px;
+	background-color: #d64545;
+	overflow: hidden;
+	position: relative;
+}
+
+.cover-icon {
+	color: #f2f2f2;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	font-size: 20px;
+}
+
+.btn.dropdown-toggle {
+	width: 100%;
+	text-align: left;
+	padding: 15px 25px;
+	font-size: 14px;
+	background-color: #f2f2f2;
+	border: 2px solid #f2f2f2;
+	color: #898989;
+}
+
+.btn:focus {
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem transparent;
+}
+
+.btn.dropdown-toggle:focus {
+	background-color: #fff;
+	border-left: 2px solid #d64545;
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dropdown-menu {
+	height: 200px;
+	overflow-y: scroll;
+}
+
+.interested.dropdown-menu{
+    height: auto;
+    width:100%;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+	background-color: #ffffff;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+	width: 6px;
+	background-color: #ffffff;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+	background-color: #ffffff;
+}
+
+.dropdown-menu:hover::-webkit-scrollbar {
+	background-color: #f5f5f5;
+}
+
+.dropdown-menu:hover::-webkit-scrollbar-thumb {
+	background-color: #dadada;
+}
+
+/* Media query for multistep form */
+@media only screen and (max-width: 992px) {
+	.box-wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.border-right-utils {
+		border-right: transparent;
+	}
+}
+
+/* svg animations */
+/* .dot-1 .dot-2 .dot-3 {
+	fill: white;
+}
+
+.dot-1 {
+	animation: fillShuffle 1s linear infinite alternate;
+}
+
+.dot-2 {
+	animation: fillShuffle 1s linear 0.2s infinite alternate;
+}
+
+.dot-3 {
+	animation: fillShuffle 1s linear 0.4s infinite alternate;
+}
+
+.board-1 {
+	animation: moveBackForth 3s linear infinite alternate-reverse;
+}
+
+.board-2 {
+	animation: moveBackForth 3.5s linear -0.3s infinite alternate;
+}
+
+.board-3 {
+	animation: moveUpDown 2s linear -0.3s infinite alternate-reverse;
+}
+
+.board-4 {
+	animation: moveUpDown 1.5s linear infinite alternate;
+}
+
+.board-5 {
+	animation: moveUpDown 2s linear infinite alternate;
+}
+
+.board-6 {
+	animation: moveUpDown 1.5s linear -0.3s infinite alternate-reverse;
+} */
+
+.chat-1 {
+	animation: chatColor 1.5s linear infinite alternate;
+}
+
+.chat-2 {
+	animation: chatColor 1.5s linear 0.3s infinite alternate-reverse;
+}
+
+.line {
+	animation: backForth 3s linear infinite alternate;
+}
+
+.leaf-1 {
+	animation: leafColor 1.5s linear infinite alternate;
+}
+.leaf-2 {
+	animation: leafColor 1.5s linear -0.3s infinite alternate-reverse;
+}
+.leaf-3 {
+	animation: leafColor 1.5s linear -0.6s infinite alternate;
+}
+.leaf-4 {
+	animation: leafColor 1.5s linear -1s infinite alternate-reverse;
+}
+.leaf-5 {
+	animation: leafColor 1.5s linear -0.3s infinite alternate;
+}
+
+.phone {
+	animation: moveUp 3s linear infinite alternate;
+}
+
+.light {
+	animation: lightUp 3s linear infinite alternate;
+}
+
+.light-reverse {
+	animation: lightUp 1s linear -3s infinite alternate-reverse;
+}
+
+@keyframes fillShuffle {
+	0% {
+		fill: #4a89dc;
+	}
+	100% {
+		fill: #ffffff;
+	}
+}
+
+@keyframes moveBackForth {
+	0% {
+		transform: translate(5px, 5px);
+	}
+	50% {
+		transform: translate(-5px, -5px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes moveUpDown {
+	0% {
+		transform: translate(0, 5px);
+	}
+	100% {
+		transform: translate(0, -5px);
+	}
+}
+
+@keyframes chatColor {
+	0% {
+		fill: #37bc9b;
+	}
+	100% {
+		fill: #6c63ff;
+	}
+}
+
+@keyframes backForth {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-150px);
+	}
+}
+
+@keyframes leafColor {
+	0% {
+		fill: #5f8137;
+	}
+	100% {
+		fill: #8cc051;
+	}
+}
+
+@keyframes moveUp {
+	0% {
+		transform: translateY(-40px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes lightUp {
+	0% {
+		fill: #d64545;
+	}
+	50% {
+		fill: #d64545;
+	}
+	100% {
+		fill: #f2f2f2;
+	}
+}
